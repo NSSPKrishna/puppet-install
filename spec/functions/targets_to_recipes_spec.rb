@@ -16,4 +16,5 @@ describe 'newrelic_installer::targets_to_recipes' do
   it { is_expected.to run.with_params(['logs']).and_raise_error(Puppet::ParseError) }
   # infrastructure is still missing
   it { is_expected.to run.with_params(['php', 'logs']).and_raise_error(Puppet::ParseError) }
+  it { is_expected.to run.with_params(['node', 'logs']).and_raise_error(Puppet::ParseError) }
 end
